@@ -262,8 +262,8 @@ html {
     grid-template-columns: 1fr repeat(3, 150px) 1fr; 
     grid-template-rows: auto auto;
     justify-content: center;
-    gap: 40px 75px;
-    padding: 20px 10px;
+    gap: 35px 80px;
+    padding: 15px 10px;
 }
 .school-modal .concept-card:nth-child(1) { grid-column: 2 / 3; grid-row: 1; }
 .school-modal .concept-card:nth-child(2) { grid-column: 3 / 4; grid-row: 1; }
@@ -274,7 +274,7 @@ html {
     width: 150px;
     min-height: 150px; 
     position: static; 
-    padding: 15px; 
+    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -449,10 +449,10 @@ html {
 /* Biography Carousel Container */
 .bio-carousel {
     position: relative;
-    width: 80%;        
-    max-width: 600px;   
-    margin: 0 auto;     
-    padding: 15px 60px; 
+    width: 80%;        /* âœ… Changed from 90% to 100% */
+    max-width: 600px;   /* âœ… Increased from 700px */
+    margin: -25px auto 0 auto;  /* Move carousel up */
+    padding: 15px 60px; /* âœ… Increased padding for arrows */
 }
 .bio-carousel-container {
     overflow: hidden;
@@ -471,7 +471,7 @@ html {
     cursor: pointer;
     background-color: #e6d1ab;
     border-radius: 8px;
-    padding: 30px;      
+    padding: 25px;      /* âœ… Increased from 20px */
     border: 3px solid #7b684c;
     box-sizing: border-box;
     transition: transform 0.3s ease;
@@ -482,12 +482,12 @@ html {
 /* Biography Images */
 .bio-item img {
     width: 100%;
-    max-width: 400px;   
-    height: 300px;      
+    max-width: 400px;   /* âœ… Increased from 400px */
+    height: 300px;      /* âœ… Increased from 300px */
     object-fit: cover;
     border-radius: 8px;
     border: 3px solid #7b684c;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     transition: filter 0.3s ease, box-shadow 0.3s ease;
 }
 .bio-item:hover img {
@@ -496,7 +496,7 @@ html {
 }
 /* Biography Caption */
 .bio-caption {
-    font-size: 1.4em;   
+    font-size: 1.4em;   /* âœ… Increased from 1.3em */
     font-weight: 700;
     color: #3a251b;
     text-align: center;
@@ -506,7 +506,7 @@ html {
 /* Navigation Arrows */
 .bio-arrow {
     position: absolute;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
     background-color: #7b684c;
     color: #fcf8e8;
@@ -514,7 +514,7 @@ html {
     width: 50px;        
     height: 50px;
     border-radius: 50%;
-    font-size: 2em;     
+    font-size: 2em;     /* âœ… Increased from 1.8em */
     cursor: pointer;
     z-index: 20;
     transition: all 0.3s ease;
@@ -551,11 +551,11 @@ html {
 .bio-dots {
     display: flex;
     justify-content: center;
-    gap: 12px;          
-    margin-top: 25px;   
+    gap: 15px;          /* âœ“ Increased from 10px */
+    margin-top: 25px;   /* âœ“ Reduced to bring closer to carousel */
 }
 .bio-dot {
-    width: 14px;        
+    width: 14px;        /* âœ… Increased from 12px */
     height: 14px;
     border-radius: 50%;
     background-color: #c5a676;
@@ -650,12 +650,12 @@ html {
 }
 .bio-nested-modal-content {
     background-color: #fcf8e8;
-    margin: 5vh auto;    
+    margin: 5vh auto;    /* âœ… Adjust this to move popup up/down */
     padding: 30px;
     border: 4px double #5d4029; 
     width: 70%;
-    max-width: 700px;    
-    max-height: 80vh;    
+    max-width: 700px;    /* Wider for biography text */
+    max-height: 80vh;    /* Taller for long text */
     overflow-y: auto;
     text-align: center;
     border-radius: 10px;
@@ -680,7 +680,7 @@ html {
     font-size: 1.1em;
     line-height: 1.7;
     text-align: justify;
-    text-indent: 2em;   
+    text-indent: 2em;   /* first line indent */
     padding: 0 20px;
     color: #4a3328;
 }
@@ -735,9 +735,10 @@ html {
     height: 100%;
     animation: fadeIn 0.3s ease;
 }
+
 .merits-nested-modal-content {
     background-color: #fcf8e8;
-    margin: 25vh auto;
+    margin: 20vh auto;
     padding: 30px;
     border: 4px double #5d4029; 
     width: 70%;
@@ -751,6 +752,7 @@ html {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
     animation: scaleIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 #meritsNestedModalTitle {
     font-size: 1.8em;
     font-weight: bold;
@@ -763,6 +765,7 @@ html {
     background-color: #fcf8e8;
     z-index: 10;
 }
+
 #meritsNestedModalText {
     font-size: 1.1em;
     line-height: 1.7;
@@ -771,6 +774,7 @@ html {
     padding: 0 20px;
     color: #4a3328;
 }
+
 .close-merits-nested-button {
     color: #5d4029;
     font-size: 35px;
@@ -782,25 +786,31 @@ html {
     transition: color 0.3s ease, transform 0.2s ease;
     z-index: 122;
 }
+
 .close-merits-nested-button:hover {
     color: #3a251b;
     transform: rotate(90deg);
 }
+
 /* Scrollbar styling for merits nested modal */
 .merits-nested-modal-content::-webkit-scrollbar {
     width: 8px;
 }
+
 .merits-nested-modal-content::-webkit-scrollbar-track {
     background: #e6d1ab;
     border-radius: 4px;
 }
+
 .merits-nested-modal-content::-webkit-scrollbar-thumb {
     background: #7b684c;
     border-radius: 4px;
 }
+
 .merits-nested-modal-content::-webkit-scrollbar-thumb:hover {
     background: #5d4029;
 }
+
 /* Responsive */
 @media (max-width: 768px) {
     .merits-nested-modal-content {
@@ -811,12 +821,12 @@ html {
 }
 /* Poem Modal Content - Main Container */
 .poem-modal-content {
-    width: 70%;       
-    max-width: 800px; 
-    height: auto;     
-    max-height: 90vh; 
-    overflow-y: auto; 
-    overflow-x: hidden; 
+    width: 70%;       /* bigger width */
+    max-width: 800px; /* maximum width */
+    height: auto;     /* auto height based on content */
+    max-height: 90vh; /* max viewport height */
+    overflow-y: auto; /* scroll if content exceeds modal height */
+    overflow-x: hidden; /* prevent horizontal scroll */
     padding: 30px;
     border-radius: 5px;
     /* Hide scrollbar */
@@ -826,6 +836,44 @@ html {
 /* Hide scrollbar for Chrome/Safari */
 .poem-modal-content::-webkit-scrollbar {
     display: none;
+}
+/* Poem Modal Title - Match the general modal title style */
+#poemModalTitle {
+    font-size: 2.8em; 
+    margin-top: 0;
+    font-family: 'Times New Roman', Times, serif; 
+    font-weight: bold;
+    border-bottom: 2px solid #b58863;
+    padding-bottom: 17px;
+    color: #3a251b; 
+}
+/* Poem Modal Close Button - Match general modal close button */
+.close-poem-button {
+    color: #7b684c; 
+    font-size: 45px; 
+    font-weight: normal;
+    position: absolute; 
+    top: 5px;
+    right: 25px;
+    z-index: 101;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+.close-poem-button:hover,
+.close-poem-button:focus {
+    color: #4a3328; 
+    text-decoration: none;
+    cursor: pointer;
+    transform: rotate(90deg);
+}
+/* Poem Modal Content */
+#poemModalContent {
+    margin-top: 20px;
+}
+/* Make sure video takes full width */
+#poemModalContent video {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 5px;
 }
 /* Poem Modal Title - Match the general modal title style */
 #poemModalTitle {
@@ -869,7 +917,7 @@ html {
 .summary-modal-content {
     background-color: #fcf8e8; 
     margin: 4vh auto; 
-    padding: 30px; 
+    padding: 25px; 
     border: 3px solid #b58863; 
     width: 80%; 
     max-width: 750px; 
@@ -881,16 +929,7 @@ html {
     overflow-y: visible;
     animation: slideDown 0.4s ease;
 }
-@keyframes slideDown {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
+
 #summaryModalTitle {
     font-size: 2.8em; 
     margin-top: 0;
@@ -906,12 +945,14 @@ html {
     max-width: 100%;
     margin: 0 auto;
 }
+
 .summary-carousel {
     position: relative;
     width: 100%;
     padding: 0;
     margin: 0;
 }
+
 .summary-carousel-container {
     overflow: hidden;
     border-radius: 12px;
@@ -922,11 +963,13 @@ html {
     margin: 0 50px;
     height: 450px;
 }
+
 .summary-carousel-track {
     display: flex;
     height: 100%;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .summary-slide {
     min-width: 100%;
     height: 100%;
@@ -935,12 +978,13 @@ html {
     display: flex;
     flex-direction: column;
 }
+
 /* Slide counter - MOVED FURTHER FROM TITLE */
 .summary-carousel-container::before {
     content: attr(data-slide);
     position: absolute;
     top: 10px;
-    right: 15px; 
+    right: 15px; /* Moved more to the right */
     background: #7b684c;
     color: #fcf8e8;
     padding: 4px 10px;
@@ -950,15 +994,17 @@ html {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
     z-index: 5;
 }
+
 .summary-slide-header {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 15px;
     flex-shrink: 0;
-    padding-right: 30px; 
-    padding-left: 30px; 
+    padding-right: 30px; /* Offset for slide counter */
+    padding-left: 30px; /* Move title to the right */
 }
+
 .summary-slide-title {
     font: bold 1.65em 'Times New Roman', serif;
     color: #3a251b;
@@ -966,6 +1012,7 @@ html {
     margin: 0;
     text-align: center;
 }
+
 /* Text wrapper with scrollbar */
 .summary-slide-text-wrapper {
     flex: 1;
@@ -973,22 +1020,27 @@ html {
     overflow-x: hidden;
     padding-right: 10px;
 }
+
 /* Scrollbar styling */
 .summary-slide-text-wrapper::-webkit-scrollbar {
     width: 8px;
 }
+
 .summary-slide-text-wrapper::-webkit-scrollbar-track {
     background: #e6d1ab;
     border-radius: 4px;
 }
+
 .summary-slide-text-wrapper::-webkit-scrollbar-thumb {
     background: #7b684c;
     border-radius: 4px;
     transition: background 0.3s ease;
 }
+
 .summary-slide-text-wrapper::-webkit-scrollbar-thumb:hover {
     background: #5d4029;
 }
+
 /* Text Content */
 .summary-slide-text {
     font: 1.15em Georgia, 'Palatino Linotype', Palatino, serif;
@@ -998,18 +1050,23 @@ html {
     margin: 0 0 1em 0;
     text-indent: 2em;
 }
+
 .summary-slide-text:last-child {
     margin-bottom: 0;
 }
+
 .summary-slide-text:first-child {
     margin-top: 0;
 }
+
 .summary-slide-text strong {
     color: #3a251b;
 }
+
 .summary-slide-text em {
     color: #5d4029;
 }
+
 /* Quote box */
 .summary-quote {
     background: #d4c4a8;
@@ -1022,6 +1079,7 @@ html {
     border-radius: 6px;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
+
 /* Visual container */
 .summary-visual {
     display: flex;
@@ -1030,6 +1088,7 @@ html {
     margin-top: 15px;
     padding: 10px;
 }
+
 /* Arrows */
 .summary-arrow {
     position: absolute;
@@ -1050,29 +1109,36 @@ html {
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
 .summary-arrow:hover {
     background: #5d4029;
     transform: translateY(-50%) scale(1.1);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
+
 .summary-arrow:active {
     transform: translateY(-50%) scale(0.95);
 }
+
 .summary-arrow-left { 
     left: 0;
 }
+
 .summary-arrow-right { 
     right: 0;
 }
+
 .summary-arrow:disabled {
     background: #c5a676;
     cursor: not-allowed;
     opacity: 0.6;
     box-shadow: none;
 }
+
 .summary-arrow:disabled:hover {
     transform: translateY(-50%) scale(1);
 }
+
 /* Dots */
 .summary-dots {
     display: flex;
@@ -1081,6 +1147,7 @@ html {
     margin-top: 15px;
     padding-bottom: 0;
 }
+
 .summary-dot {
     width: 14px;
     height: 14px;
@@ -1090,27 +1157,35 @@ html {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
 .summary-dot:hover {
     background: #a8916d;
     transform: scale(1.2);
 }
+
 .summary-dot.active {
     background: #5d4029;
     transform: scale(1.3);
 }
+
 /* ------------------- RESPONSIVE ------------------- */
 @media (max-width: 768px) {
-    .summary-modal-content {
+    .summary-modal-wrapper {
         max-width: 90%;
         padding: 30px 20px;
     }
     .summary-carousel-container {
         margin: 0 45px;
         height: 400px;
+    }  
+    .summary-icon {
+        width: 42px;
+        height: 42px;
     }
 }
+
 @media (max-width: 500px) {
-    .summary-modal-content {
+    .summary-modal-wrapper {
         padding: 25px 15px;
     } 
     .summary-carousel-container {
@@ -1124,10 +1199,10 @@ html {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 8px; 
+        gap: 8px; /* Reduced from 15px */
         margin-bottom: 10px;
         flex-shrink: 0;
-        padding-right: 10px; 
+        padding-right: 10px; /* Reduced from 60px */
     }    
     .summary-slide-title { 
         font-size: 1.3em; 
@@ -1167,6 +1242,7 @@ html {
     overflow-y: visible;
     animation: slideDown 0.4s ease;
 }
+
 #analysisModalTitle {
     font-size: 2.8em; 
     margin-top: 0;
@@ -1177,17 +1253,20 @@ html {
     margin-bottom: 18px;
     color: #3a251b; 
 }
+
 .analysis-modal {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
 }
+
 .analysis-carousel {
     position: relative;
     width: 100%;
     padding: 0;
     margin: 0;
 }
+
 .analysis-carousel-container {
     overflow: hidden;
     border-radius: 12px;
@@ -1203,6 +1282,7 @@ html {
     height: 100%;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .analysis-slide {
     min-width: 100%;
     height: 100%;
@@ -1211,6 +1291,7 @@ html {
     display: flex;
     flex-direction: column;
 }
+
 /* Slide counter */
 .analysis-carousel-container::before {
     content: attr(data-slide);
@@ -1226,6 +1307,7 @@ html {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
     z-index: 5;
 }
+
 .analysis-slide-header {
     display: flex;
     align-items: center;
@@ -1235,6 +1317,7 @@ html {
     padding-right: 33px;
     padding-left: 3px;
 }
+
 .analysis-slide-title {
     font: bold 1.85em 'Times New Roman', serif;
     color: #3a251b;
@@ -1244,6 +1327,7 @@ html {
     margin-bottom: -15px;
     text-align: center;
 }
+
 /* Text wrapper with scrollbar */
 .analysis-slide-text-wrapper {
     flex: 1;
@@ -1251,22 +1335,27 @@ html {
     overflow-x: hidden;
     padding-right: 10px;
 }
+
 /* Scrollbar styling */
 .analysis-slide-text-wrapper::-webkit-scrollbar {
     width: 8px;
 }
+
 .analysis-slide-text-wrapper::-webkit-scrollbar-track {
     background: #e6d1ab;
     border-radius: 4px;
 }
+
 .analysis-slide-text-wrapper::-webkit-scrollbar-thumb {
     background: #7b684c;
     border-radius: 4px;
     transition: background 0.3s ease;
 }
+
 .analysis-slide-text-wrapper::-webkit-scrollbar-thumb:hover {
     background: #5d4029;
 }
+
 /* Text Content */
 .analysis-slide-text {
     font: 1.05em Georgia, 'Palatino Linotype', Palatino, serif;
@@ -1275,15 +1364,15 @@ html {
     text-align: justify;
     margin: 0 0 1em 0;
 }
+
 .analysis-slide-text:last-child {
     margin-bottom: 0;
 }
+
 .analysis-slide-text:first-child {
     margin-top: 0;
 }
-.analysis-slide-text.no-indent {
-    text-indent: 0;
-}
+
 /* Arrows */
 .analysis-arrow {
     position: absolute;
@@ -1304,36 +1393,34 @@ html {
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
 .analysis-arrow:hover {
     background: #5d4029;
     transform: translateY(-50%) scale(1.1);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
+
 .analysis-arrow:active {
     transform: translateY(-50%) scale(0.95);
 }
+
 .analysis-arrow-left { 
     left: 0;
 }
+
 .analysis-arrow-right { 
     right: 0;
 }
+
 .analysis-arrow:disabled {
     background: #c5a676;
     cursor: not-allowed;
     opacity: 0.6;
     box-shadow: none;
 }
+
 .analysis-arrow:disabled:hover {
     transform: translateY(-50%) scale(1);
-}
-/* Navigation container */
-.analysis-navigation {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 15px;
 }
 
 /* Dots */
@@ -1341,7 +1428,10 @@ html {
     display: flex;
     justify-content: center;
     gap: 10px;
+    margin-top: 15px;
+    padding-bottom: 0;
 }
+
 .analysis-dot {
     width: 14px;
     height: 14px;
@@ -1351,14 +1441,17 @@ html {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
 .analysis-dot:hover {
     background: #a8916d;
     transform: scale(1.2);
 }
+
 .analysis-dot.active {
     background: #5d4029;
     transform: scale(1.3);
 }
+
 /* Responsive */
 @media (max-width: 768px) {
     .analysis-carousel-container {
@@ -1366,6 +1459,7 @@ html {
         height: 400px;
     }
 }
+
 @media (max-width: 500px) {
     .analysis-carousel-container {
         margin: 0 45px;
@@ -1396,23 +1490,25 @@ html {
     display: flex; 
     align-items: center; 
     justify-content: space-between; 
-    margin-top: -15px; 
+    margin-top: -15px; /* Moves the whole section up */
     width: 100%;
 }
+
 /* Stanza Box (Left Side) */
 .highlight-stanza {
-    background-color: #e6d1ab; 
+    background-color: #e6d1ab; /* soft brown tone */
     color: #3a251b;
     padding: 15px 25px;
     margin: 20px 0 25px 0; 
     border-left: 6px solid #b58863;
     border-radius: 10px;
-    width: 45%; 
+    width: 45%; /* Retain width for left side */
     text-align: left;
     position: relative;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    line-height: 1.8; 
+    line-height: 1.8; /* Increased line spacing */
 }
+
 /* Arrow pointing toward the stanza from the outside */
 .highlight-stanza::before {
     content: '';
@@ -1424,6 +1520,7 @@ html {
     border-style: solid;
     border-color: transparent #e6d1ab transparent transparent;
 }
+
 /* Descriptive Text (Right Side) */
 .stanza-description {
     width: 45%; 
@@ -1432,6 +1529,7 @@ html {
     color: #4a3328;
     line-height: 1.2; 
 }
+
 /* Styling for the arrow icon in the description */
 .stanza-description .arrow-icon {
     font-size: 1.7em; 
@@ -1442,18 +1540,19 @@ html {
 }
 /* Container wrapping both stanzas */
 .rhyme-layout-container {
-    display: flex;               
+    display: flex;               /* enables side-by-side layout */
     justify-content: space-between;
     align-items: flex-start;
-    gap: 20px;                   
-    flex-wrap: wrap;             
+    gap: 20px;                   /* space between stanzas */
+    flex-wrap: wrap;             /* stacks on smaller screens */
     margin: 20px 0 25px 0; 
 }
+
 /* Individual stanza block */
 .rhyme-stanza {
-    flex: 1;                     
-    min-width: 300px;            
-    background-color: #e6d1ab;   
+    flex: 1;                     /* takes equal space */
+    min-width: 300px;            /* prevents being too narrow */
+    background-color: #e6d1ab;   /* soft brown tone */
     color: #3a251b;
     padding: 20px;
     border: 2px solid #b58863;
@@ -1463,18 +1562,19 @@ html {
 }
 .rhyme-word {
     font-weight: bold;
-    color: #2a180f; 
+    color: #2a180f; /* darker brown */
 }
 /* ---------------------------------------------------------------- */
 /* --- MERITS MODAL CONTENT STYLING (Same size as Conventions) --- */
 /* ---------------------------------------------------------------- */
+
 .merits-modal-content {
     background-color: #fcf8e8; 
     margin: 5vh auto; 
-    padding: 35px; 
+    padding: 3p0x; 
     border: 3px solid #b58863; 
     width: 80%; 
-    max-width: 850px; 
+    max-width: 825px; 
     text-align: center;
     border-radius: 5px; 
     position: relative;
@@ -1483,6 +1583,7 @@ html {
     overflow-y: visible;
     animation: slideDown 0.4s ease;
 }
+
 #meritsModalTitle {
     font-size: 2.8em; 
     margin-top: 0;
@@ -1492,6 +1593,7 @@ html {
     padding-bottom: 25px;
     color: #3a251b; 
 }
+
 .close-merits-button {
     color: #7b684c; 
     font-size: 45px; 
@@ -1502,6 +1604,7 @@ html {
     z-index: 101;
     transition: color 0.3s ease, transform 0.2s ease;
 }
+
 .close-merits-button:hover,
 .close-merits-button:focus {
     color: #4a3328; 
@@ -1509,10 +1612,12 @@ html {
     cursor: pointer;
     transform: rotate(90deg);
 }
+
 /* ---------------------------------------------------------------- */
 /* --- LITERARY MERITS GRID STYLING (Same card size as Conventions) --- */
 /* --- 6 cards: 3 on top row, 3 on bottom row --- */
 /* ---------------------------------------------------------------- */
+
 .merits-modal .merit-icon-list {
     display: grid;
     grid-template-columns: repeat(3, 150px);
@@ -1521,6 +1626,7 @@ html {
     gap: 40px 75px;
     padding: 20px 10px;
 }
+
 /* Position cards in grid - 3x2 layout */
 .merits-modal .merit-card:nth-child(1) { grid-column: 1; grid-row: 1; }
 .merits-modal .merit-card:nth-child(2) { grid-column: 2; grid-row: 1; }
@@ -1528,12 +1634,14 @@ html {
 .merits-modal .merit-card:nth-child(4) { grid-column: 1; grid-row: 2; }
 .merits-modal .merit-card:nth-child(5) { grid-column: 2; grid-row: 2; }
 .merits-modal .merit-card:nth-child(6) { grid-column: 3; grid-row: 2; }
+
 .merits-modal .merit-card {
     width: 150px;
     min-height: 150px; 
     position: static; 
     padding: 15px; 
     display: flex;
+    margin-top: -10px;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -1548,11 +1656,13 @@ html {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 2; 
 }
+
 .merits-modal .merit-card:hover {
     transform: translateY(-3px);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     background-color: #c5a676;
 }
+
 /* --- Icon Container --- */
 .merits-modal .merit-icon {
     width: 70px; 
@@ -1562,20 +1672,24 @@ html {
     align-items: center;
     justify-content: center;
 }
+
 .merits-modal .merit-icon svg {
     width: 100%;
     height: 100%;
     transition: all 0.3s ease-in-out;
 }
+
 /* --- Hover Lighten Effect for SVG Icons --- */
 .merits-modal .merit-card:hover .merit-icon svg * {
     stroke: rgba(255, 255, 255, 0.85) !important;
     fill: rgba(255, 255, 255, 0.7) !important;
     transition: all 0.3s ease-in-out;
 }
+
 .merits-modal .merit-card:hover .merit-icon svg [fill="none"] {
     fill: none !important;
 }
+
 /* Title under icon */
 .merits-modal .merit-title {
     font-weight: bold;
@@ -1583,6 +1697,7 @@ html {
     color: #3a251b;
     line-height: 1.2;
 }
+
 /* Active state */
 .merits-modal .merit-card.active {
     background-color: #5d4029;
@@ -1591,12 +1706,15 @@ html {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(181, 136, 99, 0.9);
 }
+
 .merits-modal .merit-card.active .merit-title {
     color: white;
 }
+
 .merits-modal .merit-card.active .merit-icon svg * {
     stroke: white !important;
 }
+
 .merits-modal .merit-card.active .merit-icon svg circle,
 .merits-modal .merit-card.active .merit-icon svg polygon,
 .merits-modal .merit-card.active .merit-icon svg text,
@@ -1604,403 +1722,41 @@ html {
 .merits-modal .merit-card.active .merit-icon svg ellipse {
     fill: white !important;
 }
-/* ================================================================ */
-/* --- RESPONSIVE DESIGN FOR MOBILE & TABLET --- */
-/* ================================================================ */
-/* Large Desktop (1400px+) - Already optimized */
-/* Desktop & Large Tablets (1025px - 1400px) */
-@media (max-width: 1400px) {
-    .left-content h1 {
-        font-size: 5em;
-    }
-    
-    .left-content p {
-        font-size: 1.7em;
-    }
-    
-    .right-carousel {
-        left: 72%;
-    }
-}
-/* Tablet & Medium Screens (769px - 1024px) */
-@media (max-width: 1024px) {
-    .left-content {
-        max-width: 45%;
-        left: 4%;
-        top: 25%;
-    }
-    .left-content h1 {
-        font-size: 4em;
-    }
-    .left-content p {
-        font-size: 1.5em;
-    }
-    .right-carousel {
-        left: 70%;
-        width: 250px;
-        height: 240px;
-    }
-    .carousel-figure .card-text {
-        font-size: 1.3em;
-        padding: 16px;
-    }
-    /* Modal adjustments */
-    .modal-content {
-        width: 85%;
-        padding: 30px;
-    }
-    #modalTitle {
-        font-size: 2.4em;
-    }
-    /* School of thought grid */
-    .school-modal .concept-icon-list {
-        grid-template-columns: repeat(3, 130px);
-        gap: 30px 50px;
-    }
-    .school-modal .concept-card {
-        width: 130px;
-        min-height: 130px;
-        padding: 12px;
-    }
-    .school-modal .concept-icon {
-        width: 60px;
-        height: 60px;
-    }
-    /* Merits grid */
-    .merits-modal .merit-icon-list {
-        grid-template-columns: repeat(3, 130px);
-        gap: 30px 50px;
-    }
-    .merits-modal .merit-card {
-        width: 130px;
-        min-height: 130px;
-        padding: 12px;
-    }
-    .merits-modal .merit-icon {
-        width: 60px;
-        height: 60px;
-    }
-}
-/* Mobile Landscape & Small Tablets (481px - 768px) */
+
+/* ---------------------------------------------------------------- */
+/* --- RESPONSIVE ADJUSTMENTS --- */
+/* ---------------------------------------------------------------- */
+
 @media (max-width: 768px) {
-    body {
-        background-size: cover;
-        background-position: center;
-    }
-    /* Stack layout vertically */
-    .left-content {
-        position: relative;
-        top: auto;
-        left: auto;
-        max-width: 100%;
-        text-align: center;
-        padding: 20px;
-        margin-top: 20px;
-    }
-    .left-content h1 {
-        font-size: 3.2em;
-        margin-bottom: 10px;
-    }
-    .left-content p {
-        font-size: 1.4em;
-        margin: 0;
-        margin-left: 0;
-    }
-    .right-carousel {
-        position: relative;
-        top: auto;
-        left: 50%;
-        transform: translateX(-50%);
-        margin: 30px auto 50px;
-        width: 260px;
-        height: 250px;
-    }
-    .carousel-figure .card-text {
-        font-size: 1.2em;
-        padding: 14px;
-    }
-    /* Modal adjustments */
-    .modal-content {
-        width: 92%;
-        margin: 3vh auto;
-        padding: 25px 20px;
-    }
-    #modalTitle {
-        font-size: 2.2em;
-        padding-bottom: 18px;
-    }
-    .close-button {
-        font-size: 38px;
-        right: 18px;
-    }
-    #modalText {
-        font-size: 1.05em;
-        max-height: 35vh;
-    }
-    /* Timeline */
-    .timeline-container {
-        gap: 10px;
-        margin: 12px auto;
-    }
-    .timeline-period {
-        padding: 8px 18px;
-        font-size: 0.95em;
-    }
-/* School of thought - stack as 2 columns */
-    .school-modal .concept-icon-list {
-        grid-template-columns: repeat(2, 140px);
-        grid-template-rows: auto auto auto;
-        gap: 25px 40px;
-    }
-    .school-modal .concept-card:nth-child(1) { grid-column: 1; grid-row: 1; }
-    .school-modal .concept-card:nth-child(2) { grid-column: 2; grid-row: 1; }
-    .school-modal .concept-card:nth-child(3) { grid-column: 1; grid-row: 2; }
-    .school-modal .concept-card:nth-child(4) { grid-column: 2; grid-row: 2; }
-    .school-modal .concept-card:nth-child(5) { grid-column: 1 / 3; grid-row: 3; place-self: center; }
-    .school-modal .concept-card {
-        width: 140px;
-        min-height: 140px;
-        padding: 12px;
-    }
-    .school-modal .concept-icon {
-        width: 55px;
-        height: 55px;
-    }
-    .school-modal .concept-title {
-        font-size: 0.95em;
-    }
-    /* Merits - 2 columns */
     .merits-modal .merit-icon-list {
         grid-template-columns: repeat(2, 140px);
         grid-template-rows: auto auto auto;
-        gap: 25px 40px;
+        gap: 25px 35px;
     }
+    
     .merits-modal .merit-card:nth-child(1) { grid-column: 1; grid-row: 1; }
     .merits-modal .merit-card:nth-child(2) { grid-column: 2; grid-row: 1; }
     .merits-modal .merit-card:nth-child(3) { grid-column: 1; grid-row: 2; }
     .merits-modal .merit-card:nth-child(4) { grid-column: 2; grid-row: 2; }
     .merits-modal .merit-card:nth-child(5) { grid-column: 1; grid-row: 3; }
     .merits-modal .merit-card:nth-child(6) { grid-column: 2; grid-row: 3; }
+    
     .merits-modal .merit-card {
         width: 140px;
         min-height: 140px;
-        padding: 12px;
-    }
-    .merits-modal .merit-icon {
-        width: 55px;
-        height: 55px;
-    }
-    .merits-modal .merit-title {
-        font-size: 0.95em;
-    }
-    /* Nested modals */
-    .nested-modal-content,
-    .bio-nested-modal-content,
-    .merits-nested-modal-content {
-        width: 85%;
-        margin: 8vh auto;
-        padding: 25px;
-    }
-    #nestedModalTitle,
-    #bioNestedModalTitle,
-    #meritsNestedModalTitle {
-        font-size: 1.6em;
-    }
-    #nestedModalText,
-    #bioNestedModalText,
-    #meritsNestedModalText {
-        font-size: 1.05em;
-    }
-    /* Poem modal */
-    .poem-modal-content {
-        width: 92%;
-        padding: 25px 20px;
-    }
-    #poemModalTitle {
-        font-size: 2.2em;
-    }
-    /* Summary modal */
-    .summary-modal-content {
-        width: 92%;
-        padding: 25px 20px;
-    }
-    #summaryModalTitle {
-        font-size: 2.2em;
-    }
-    /* Analysis modal */
-    .analysis-modal-content {
-        width: 92%;
-        padding: 25px 20px;
-    }
-    #analysisModalTitle {
-        font-size: 2.2em;
-    }
-    /* Merits modal */
-    .merits-modal-content {
-        width: 92%;
-        padding: 25px 20px;
-    }
-    #meritsModalTitle {
-        font-size: 2.2em;
-    }
-    /* Poem layout containers stack on tablet */
-    .poem-layout-container {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    .highlight-stanza,
-    .stanza-description {
-        width: 100%;
-        padding: 15px;
-    }
-    .highlight-stanza {
-        margin-bottom: 15px;
-    }
-    .stanza-description {
-        padding-left: 0;
-    }
-    .rhyme-layout-container {
-        flex-direction: column;
-    }
-    .rhyme-stanza {
-        width: 100%;
-        min-width: 100%;
     }
 }
 
-/* MOBILE PORTRAIT - 320px to 480px */
-@media (max-width: 480px) {
-    /* Home section */
-    .left-content {
-        position: relative;
-        top: auto;
-        left: auto;
-        max-width: 100%;
-        text-align: center;
-        padding: 15px 10px;
-        margin-top: 15px;
-    }
-    
-    .left-content h1 {
-        font-size: 2.2em;
-        margin-bottom: 8px;
-    }
-    
-    .left-content p {
-        font-size: 1.1em;
-        margin-left: 0;
-    }
-    
-    /* Carousel - much smaller */
-    .right-carousel {
-        position: relative;
-        top: auto;
-        left: 50%;
-        transform: translateX(-50%);
-        margin: 20px auto 30px;
-        width: 180px;
-        height: 170px;
-    }
-    
-    .carousel-figure .card-text {
-        font-size: 0.9em;
-        padding: 10px;
-    }
-    
-    /* Modal base */
-    .modal-content,
-    .bio-modal-content,
-    .poem-modal-content,
-    .summary-modal-content,
-    .analysis-modal-content,
-    .merits-modal-content {
-        width: 95%;
-        margin: 2vh auto;
-        padding: 15px 12px;
-        max-height: 85vh;
-        overflow-y: auto;
-    }
-    
-    /* Modal titles */
-    #modalTitle,
-    #bioModalTitle,
-    #poemModalTitle,
-    #summaryModalTitle,
-    #analysisModalTitle,
-    #meritsModalTitle {
-        font-size: 1.6em;
-        padding-bottom: 10px;
-        margin-bottom: 12px;
-    }
-    
-    /* Close buttons */
-    .close-button,
-    .close-bio-button,
-    .close-poem-button,
-    .close-summary-button,
-    .close-analysis-button,
-    .close-merits-button {
-        font-size: 28px;
-        right: 10px;
-        top: 3px;
-    }
-    
-    /* Modal text */
-    #modalText {
-        font-size: 0.95em;
-        line-height: 1.5;
-        max-height: 50vh;
-        text-indent: 1.5em;
-    }
-    
-    /* Timeline */
-    .timeline-container {
-        gap: 6px;
-        margin: 10px auto;
-    }
-    
-    .timeline-period {
-        padding: 6px 12px;
-        font-size: 0.75em;
-    }
-    
-    /* School of Thought - Single column */
-    .school-modal .concept-icon-list {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        padding: 10px 5px;
-    }
-    
-    .school-modal .concept-card {
-        width: 100%;
-        max-width: 250px;
-        min-height: auto;
-        margin: 0 auto;
-        padding: 15px;
-    }
-    
-    .school-modal .concept-icon {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .school-modal .concept-title {
-        font-size: 0.95em;
-    }
-    
-    /* Merits - Single column */
+@media (max-width: 400px) {
     .merits-modal .merit-icon-list {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        padding: 10px 5px;
+        grid-template-columns: repeat(2, 120px);
+        gap: 20px 25px;
     }
     
     .merits-modal .merit-card {
-        width: 100%;
-        max-width: 250px;
-        min-height: auto;
-        margin: 0 auto;
-        padding: 15px;
+        width: 120px;
+        min-height: 120px;
+        padding: 10px;
     }
     
     .merits-modal .merit-icon {
@@ -2009,362 +1765,6 @@ html {
     }
     
     .merits-modal .merit-title {
-        font-size: 0.95em;
-    }
-    
-    /* Nested modals */
-    .nested-modal-content,
-    .bio-nested-modal-content,
-    .merits-nested-modal-content {
-        width: 90%;
-        margin: 5vh auto;
-        padding: 20px 15px;
-        max-height: 75vh;
-        overflow-y: auto;
-    }
-    
-    #nestedModalTitle,
-    #bioNestedModalTitle,
-    #meritsNestedModalTitle {
-        font-size: 1.3em;
-        padding-bottom: 8px;
-    }
-    
-    #nestedModalText,
-    #bioNestedModalText,
-    #meritsNestedModalText {
-        font-size: 0.95em;
-        line-height: 1.6;
-        text-indent: 1.5em;
-    }
-    
-    .close-nested-button,
-    .close-bio-nested-button,
-    .close-merits-nested-button {
-        font-size: 25px;
-        right: 10px;
-    }
-    
-    /* Biography carousel */
-    .bio-carousel {
-        padding: 10px 35px;
-        max-width: 100%;
-    }
-    
-    .bio-item {
-        padding: 15px 10px;
-    }
-    
-    .bio-item img {
-        max-width: 100%;
-        height: 200px;
-    }
-    
-    .bio-caption {
-        font-size: 1em;
-    }
-    
-    .bio-arrow {
-        width: 35px;
-        height: 35px;
-        font-size: 1.3em;
-    }
-    
-    .bio-arrow-left {
-        left: 2px;
-    }
-    
-    .bio-arrow-right {
-        right: 2px;
-    }
-    
-    .bio-dot {
-        width: 10px;
-        height: 10px;
-    }
-    
-    /* Summary carousel */
-    .summary-carousel-container {
-        margin: 0 35px;
-        height: 320px;
-    }
-    
-    .summary-slide {
-        padding: 15px 20px;
-    }
-    
-    .summary-slide-header {
-        margin-bottom: 10px;
-        padding-right: 15px;
-    }
-    
-    .summary-slide-title {
-        font-size: 1.2em;
-    }
-    
-    .summary-slide-text {
-        font-size: 0.9em;
-        line-height: 1.55;
-        text-indent: 1.5em;
-    }
-    
-    .summary-arrow {
-        width: 35px;
-        height: 35px;
-        font-size: 1.3em;
-    }
-    
-    .summary-dot {
-        width: 10px;
-        height: 10px;
-    }
-    
-    /* Analysis carousel */
-    .analysis-carousel-container {
-        margin: 0 35px;
-        height: 320px;
-    }
-    
-    .analysis-slide {
-        padding: 15px 20px;
-    }
-    
-    .analysis-slide-header {
-        margin-bottom: 10px;
-        padding-right: 15px;
-    }
-    
-    .analysis-slide-title {
-        font-size: 1.2em;
-    }
-    
-    .analysis-slide-text {
-        font-size: 0.9em;
-        line-height: 1.55;
-    }
-    
-    .analysis-arrow {
-        width: 35px;
-        height: 35px;
-        font-size: 1.3em;
-    }
-    
-    .analysis-dot {
-        width: 10px;
-        height: 10px;
-    }
-    
-    /* Poem layouts */
-    .poem-layout-container {
-        flex-direction: column;
-        margin-top: 5px;
-    }
-    
-    .highlight-stanza,
-    .stanza-description {
-        width: 100%;
-        padding: 12px;
-        font-size: 0.9em;
-    }
-    
-    .highlight-stanza {
-        margin: 10px 0 15px 0;
-    }
-    
-    .stanza-description {
-        padding-left: 0;
-    }
-    
-    .rhyme-layout-container {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .rhyme-stanza {
-        width: 100%;
-        min-width: 100%;
-        font-size: 0.9em;
-        padding: 12px;
-    }
-}
-
-/* MOBILE LANDSCAPE & SMALL TABLETS - 481px to 768px */
-@media (min-width: 481px) and (max-width: 768px) {
-    .left-content {
-        position: relative;
-        top: auto;
-        left: auto;
-        max-width: 100%;
-        text-align: center;
-        padding: 20px;
-        margin-top: 20px;
-    }
-    
-    .left-content h1 {
-        font-size: 3em;
-        margin-bottom: 10px;
-    }
-    
-    .left-content p {
-        font-size: 1.3em;
-        margin-left: 0;
-    }
-    
-    .right-carousel {
-        position: relative;
-        top: auto;
-        left: 50%;
-        transform: translateX(-50%);
-        margin: 25px auto 40px;
-        width: 220px;
-        height: 210px;
-    }
-    
-    .carousel-figure .card-text {
-        font-size: 1.1em;
-        padding: 12px;
-    }
-    
-    .modal-content,
-    .bio-modal-content,
-    .poem-modal-content,
-    .summary-modal-content,
-    .analysis-modal-content,
-    .merits-modal-content {
-        width: 90%;
-        padding: 25px 20px;
-    }
-    
-    #modalTitle,
-    #bioModalTitle,
-    #poemModalTitle,
-    #summaryModalTitle,
-    #analysisModalTitle,
-    #meritsModalTitle {
-        font-size: 2em;
-    }
-    
-    /* School of thought - 2 columns */
-    .school-modal .concept-icon-list {
-        grid-template-columns: repeat(2, 130px);
-        gap: 20px 30px;
-    }
-    
-    .school-modal .concept-card {
-        width: 130px;
-        min-height: 130px;
-        padding: 12px;
-    }
-    
-    .school-modal .concept-icon {
-        width: 55px;
-        height: 55px;
-    }
-    
-    /* Merits - 2 columns */
-    .merits-modal .merit-icon-list {
-        grid-template-columns: repeat(2, 130px);
-        gap: 20px 30px;
-    }
-    
-    .merits-modal .merit-card {
-        width: 130px;
-        min-height: 130px;
-        padding: 12px;
-    }
-    
-    .merits-modal .merit-icon {
-        width: 55px;
-        height: 55px;
-    }
-}
-
-/* TABLETS - 769px to 1024px */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .left-content {
-        max-width: 45%;
-        left: 4%;
-        top: 25%;
-    }
-    
-    .left-content h1 {
-        font-size: 4em;
-    }
-    
-    .left-content p {
-        font-size: 1.5em;
-    }
-    
-    .right-carousel {
-        left: 70%;
-        width: 250px;
-        height: 240px;
-    }
-    
-    .carousel-figure .card-text {
-        font-size: 1.3em;
-        padding: 16px;
-    }
-    
-    .modal-content {
-        width: 85%;
-        padding: 30px;
-    }
-    
-    /* School of thought - 3 columns */
-    .school-modal .concept-icon-list {
-        grid-template-columns: repeat(3, 130px);
-        gap: 30px 50px;
-    }
-    
-    .school-modal .concept-card {
-        width: 130px;
-        min-height: 130px;
-        padding: 12px;
-    }
-    
-    /* Merits - 3 columns */
-    .merits-modal .merit-icon-list {
-        grid-template-columns: repeat(3, 130px);
-        gap: 30px 50px;
-    }
-    
-    .merits-modal .merit-card {
-        width: 130px;
-        min-height: 130px;
-        padding: 12px;
-    }
-}
-
-/* LANDSCAPE MOBILE FIX */
-@media (max-height: 500px) and (orientation: landscape) {
-    .left-content {
-        margin-top: 10px;
-        padding: 10px;
-    }
-    
-    .left-content h1 {
-        font-size: 2em;
-        margin-bottom: 5px;
-    }
-    
-    .left-content p {
-        font-size: 1em;
-    }
-    
-    .right-carousel {
-        margin: 15px auto 25px;
-        width: 180px;
-        height: 170px;
-    }
-    
-    .modal-content {
-        margin: 2vh auto;
-        max-height: 90vh;
-    }
-    
-    .summary-carousel-container,
-    .analysis-carousel-container {
-        height: 200px;
+        font-size: 0.85em;
     }
 }
