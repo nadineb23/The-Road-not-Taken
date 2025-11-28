@@ -203,60 +203,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     figure.addEventListener('dragstart', (e) => e.preventDefault());
-    // Touch events for mobile
-figure.addEventListener('touchstart', (e) => {
-    if (!e.target.closest('.card-text') && !e.target.classList.contains('carousel-figure')) return;
-    
-    isDragging = true;
-    didDrag = false;
-    
-    const touch = e.touches[0];
-    lastX = touch.clientX;
-    lastY = touch.clientY;
-    
-    figure.style.transition = 'none';
-    currentYRotation = getCurrentCssYRotation();
-    
-    figure.style.cursor = 'grabbing';
-    rAF = requestAnimationFrame(updateRotation);
-});
-
-document.addEventListener('touchmove', (e) => {
-    if (!isDragging) return;
-    
-    const touch = e.touches[0];
-    const deltaX = touch.clientX - lastX;
-    const deltaY = touch.clientY - lastY;
-
-    if (Math.abs(touch.clientX - lastX) > dragTolerance || Math.abs(touch.clientY - lastY) > dragTolerance) {
-        didDrag = true;
-    }
-
-    currentYRotation += deltaX * 0.4;
-    let nextXRotation = currentXRotation + deltaY * 0.2;
-    currentXRotation = Math.max(Math.min(nextXRotation, 45), -45);
-
-    lastX = touch.clientX;
-    lastY = touch.clientY;
-});
-
-document.addEventListener('touchend', (e) => {
-    if (!isDragging) return;
-    isDragging = false;
-    
-    cancelAnimationFrame(rAF);
-
-    figure.style.transition = 'transform 0.4s ease-out';
-    
-    if (didDrag) {
-        e.preventDefault();
-    }
-
-    figure.style.transform = `rotateX(${currentXRotation}deg) rotateY(${currentYRotation}deg)`;
-    figure.style.cursor = 'grab';
-    
-    setTimeout(() => didDrag = false, 10);
-});
 
     // ---------------------------------------------------------------- 
     // --- CUSTOM SVG ICONS ---
@@ -366,7 +312,7 @@ document.addEventListener('touchend', (e) => {
             <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
                 <text x="30" y="50" font-size="32" fill="#7b684c" font-family="serif" font-weight="bold">A</text>
                 <text x="55" y="65" font-size="28" fill="#5d4029" font-family="serif" font-style="italic">a</text>
-                <text x="75" y="45" font-size="24" fill="#a8916d" font-family="serif">á</text>
+                <text x="75" y="45" font-size="24" fill="#a8916d" font-family="serif">Ã¡</text>
                 <path d="M 25 75 Q 60 95, 95 75" stroke="#7b684c" stroke-width="2" fill="none"/>
                 <path d="M 35 80 Q 60 65, 85 80" stroke="#5d4029" stroke-width="1.5" fill="none" stroke-dasharray="3,2"/>
                 <circle cx="60" cy="85" r="4" fill="#7b684c" opacity="0.5"/>
@@ -1165,7 +1111,7 @@ document.addEventListener('touchend', (e) => {
         }
     });
 
-    document.addEventListener('keydown', (event) => {
+document.addEventListener('keydown', (event) => {
     if (event.key === "Escape") {
         if (bioNestedModal && bioNestedModal.style.display === "block") {
             closeBioNestedModal();
@@ -1188,5 +1134,5 @@ document.addEventListener('touchend', (e) => {
             closeMainModal();
         }
     }
-    });
+});
 });
